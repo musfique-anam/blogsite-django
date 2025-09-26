@@ -1,0 +1,114 @@
+/* ====== Global Styles ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color: #333;
+    padding: 20px;
+}
+
+/* ====== Header ====== */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+header .tagline {
+    font-size: 1.2em;
+    color: #eee;
+    margin-top: 10px;
+}
+
+/* ====== Main Content ====== */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ====== Post Card ====== */
+.post-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.post-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-header h2 {
+    font-size: 1.8em;
+    color: #4a00e0;
+}
+
+.post-header .author {
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+}
+
+.post-card p {
+    font-size: 1em;
+    line-height: 1.7;
+    color: #555;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.post-footer .read-more {
+    text-decoration: none;
+    background: #4a00e0;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.post-footer .read-more:hover {
+    background: #8e2de2;
+}
+
+/* ====== No posts ====== */
+.no-posts {
+    text-align: center;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/* ====== Footer ====== */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+    font-size: 0.9em;
+}
