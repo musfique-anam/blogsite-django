@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Blog{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>✨ My Blog ✨</h1>
+        <p class="tagline">Discover, Read, and Enjoy Amazing Stories</p>
+
+        <!-- 🔑 Auth Section -->
+        <nav>
+            {% if user.is_authenticated %}
+              <p>Welcome, {{ user.username }}!</p>
+              <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+              </form>
+            {% else %}
+              <a href="{% url 'login' %}">Login</a> | 
+              <a href="{% url 'signup' %}">Signup</a>
+            {% endif %}
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© {{ now|date:"Y" }} My Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
